@@ -16,11 +16,13 @@ func CreateMessage(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"err": "TwitterID is null",
 		})
+		return
 	}
 	if message.Body == "" {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"err": "Body is null",
 		})
+		return
 	}
 
 	message = service.Message.Store(message)
