@@ -1,0 +1,4 @@
+develop:
+  dialect: mysql
+  datasource: root:password@tcp(127.0.0.1:3306)/akeome?parseTime=true&collation=utf8_general_ci&interpolateParams=true&loc=Local
+  dir: migration
